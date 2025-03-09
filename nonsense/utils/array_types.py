@@ -1,6 +1,7 @@
 from typing import TypeAlias, Any, Tuple
 from nptyping import NDArray, Float32, Shape
- """ nptyping is not numpy.typing
+
+""" nptyping is not numpy.typing
 https://github.com/ramonhagenaars/ing ping/tree/master
 NDArray[Shape["..."], dtype]
 
