@@ -51,20 +51,23 @@ __all__ = [
     "Rank5Shape",
 ]
 
-# n-Rank Tensor (including scalar)
-TensorShape: TypeAlias = Tuple[int, ...]
-VectorShape: TypeAlias = Tuple[int]
-MatrixShape: TypeAlias = Tuple[int, int]
-Rank3Shape: TypeAlias = Tuple[int, int, int]
-Rank4Shape: TypeAlias = Tuple[int, int, int, int]
-Rank5Shape: TypeAlias = Tuple[int, int, int, int, int]
-
+# n-Rank Tensor (not including scalars))
+# Tensors
 Tensor: TypeAlias = NDArray[Any, Float32]
 Vector: TypeAlias = NDArray[Shape["*"], Float32]
 Matrix: TypeAlias = NDArray[Shape["*, *"], Float32]
 Rank3Tensor: TypeAlias = NDArray[Shape["*, *, *"], Float32]
 Rank4Tensor: TypeAlias = NDArray[Shape["*, *, *, *"], Float32]
 Rank5Tensor: TypeAlias = NDArray[Shape["*, *, *, *, *"], Float32]
+
+
+# Tensor Shapes
+TensorShape: TypeAlias = Tuple[int, ...]
+VectorShape: TypeAlias = Tuple[int]
+MatrixShape: TypeAlias = Tuple[int, int]
+Rank3Shape: TypeAlias = Tuple[int, int, int]
+Rank4Shape: TypeAlias = Tuple[int, int, int, int]
+Rank5Shape: TypeAlias = Tuple[int, int, int, int, int]
 
 
 if __name__ == "__main__":

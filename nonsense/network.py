@@ -1,13 +1,13 @@
 from __future__ import annotations
-from attrs import define, field, setters
-from attrs.validators import not_, in_
-from typing import Type, Union, Dict, List, Optional, ClassVar, Set, Any
 import numpy as np
 from numpy.random import Generator
 from nptyping import InvalidDTypeError, InvalidShapeError, NDArray
-
+from attrs import define, field, setters
+from attrs.validators import not_, in_
+from typing import Type, Union, Dict, List, Optional, ClassVar, Set, Any
 from .optimizers import Optimizer, Adam
-from .utils.array_types import Tensor, TensorShape
+from .layers.initializers import Initializer, Initialization
+from .utils.array_type_aliases import Tensor, TensorShape
 
 def _mutate_immutable_sneaky(*args):
     for args in args
@@ -23,6 +23,8 @@ class Parameter:
     optimizer: Optimizer = field(init=False, on_setattr=setters.frozen)
     frozen: bool = field(on_setattr=setters.frozen)
     layer: Layer = field(on_setattr=setters.frozen)
+    initialization: Initialization = field(default=Initializer.identity)
+    
     
 
 @define

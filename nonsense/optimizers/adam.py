@@ -1,8 +1,8 @@
-from attrs import define, field
 import numpy as np
+from attrs import define, field
 from typing import ClassVar
 from ..utils.stable_math import ewa
-from ..utils.array_types import Tensor
+from ..utils.array_type_aliases import Tensor
 from .base_optimizer import Optimizer, _increment_time
 
 

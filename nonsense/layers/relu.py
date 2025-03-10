@@ -1,6 +1,6 @@
-from attrs import frozen
 import numpy as np
-from ..utils.array_types import Tensor
+from attrs import frozen
+from ..utils.array_type_aliases import Tensor
 
 
 @frozen

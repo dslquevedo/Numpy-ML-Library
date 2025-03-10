@@ -1,6 +1,6 @@
-from attrs import frozen
 import numpy as np
-from ..utils.array_types import Matrix
+from attrs import frozen
+from ..utils.array_type_aliases import Matrix
 from ..utils.stable_math import exp # WARNING: EXP ALTERS INPUT IN-PLACE
 
 """ Only implemented after Dense1D layers (for this project) """
