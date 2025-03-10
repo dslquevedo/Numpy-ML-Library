@@ -13,7 +13,7 @@ from numpy.random import Generator
 from attrs import define, field
 from typing import ClassVar, Type, TypeAlias
 from collections.abc import Callable
-from ..utils.array_type_aliases import Tensor
+from utils.array_type_aliases import Tensor
 
 
 @define

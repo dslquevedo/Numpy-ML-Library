@@ -1,8 +1,7 @@
 import numpy as np
 from attrs import define
-from base_optimizer import Optimizer, _increment_time
+from .base_optimizer import Optimizer, _increment_time
 from ..utils.array_type_aliases import Tensor
-
 
 
 @define

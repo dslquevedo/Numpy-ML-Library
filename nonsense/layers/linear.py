@@ -1,10 +1,10 @@
 import numpy as np
 from attrs import define, field, setters, validators
 from typing import Callable
-from ..network import Layer, Parameter
+from network import Layer, Parameter
 from .initializers import Initialization
-from ..utils.array_type_aliases import Matrix
-from ..utils.validate_dtype import validate_float32
+from utils.array_type_aliases import Matrix
+from utils.validate_dtype import validate_float32
 
 
 @define

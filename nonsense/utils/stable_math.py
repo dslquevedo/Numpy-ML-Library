@@ -1,6 +1,11 @@
 import numpy as np
 from .array_type_aliases import Tensor
 
+__all__ = [
+    "exp",
+    "ewa"
+]
+
 def exp(X: Tensor) -> Tensor:
     """ Numpy exponential function: Tradeoff NaN for accuracy by clamping 
 

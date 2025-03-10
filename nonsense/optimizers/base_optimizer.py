@@ -1,7 +1,7 @@
 import numpy as np
 from attrs import define, field, setters
 from typing import Tuple, Callable, Any
-from ..utils.array_type_aliases import Tensor
+from utils.array_type_aliases import Tensor
 
 def _increment_time(func: Callable) -> Callable:
     """ Helper decorator to increment time step by 1"""

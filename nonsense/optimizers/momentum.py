@@ -10,7 +10,6 @@ from ..utils.stable_math import ewa
 class _Momentum(Optimizer):
     beta: ClassVar[np.float32] = np.float32(0.9)
     eps: ClassVar[np.float32] = np.float32(1e-8)
-
     avg_V: Tensor = field(init=False)
     
     def __attrs_post_init__(self) -> None:
